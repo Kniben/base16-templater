@@ -1,0 +1,4 @@
+#!/bin/sh
+
+scheme=$(find schemes | fzf)
+cargo run -- --scheme "$scheme" ~/.config
