@@ -1,4 +1,3 @@
 #!/bin/sh
 
-scheme=$(find schemes | fzf)
-cargo run -- --scheme "$scheme" ~/.config
+find schemes | fzf --preview 'cargo run -- --scheme {} ~/.config' --bind 'return:execute-silent:sway reload' --preview-window 0
